@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url(/static/Diabetesprediction/bg15.jpg);
+            background-size: 1500px 700px;
+        }
+        
+        h1 {
+            color: rgb(5, 33, 85);
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        input[type=submit] {
+            background-color: rgb(15, 17, 17);
+            border: 2px;
+            color: white;
+            padding: 8px 16px;
+            margin-top: 15px;
+        }
+        
+        .panel {
+            background-color: rgba(156, 227, 241, 0.678);
+            width: 50%;
+            height: 50%;
+            margin-top: 120px;
+            margin-left: 350px;
+            box-shadow: 0px 0px 10px rgb(46, 44, 44);
+        }
+        
+        td {
+            font-size: 18px;
+        }
+        
+        td,
+        th {
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel panel-default">
+        <div align="center" class="panel-body">
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;">Please Enter The Following Information</h1><br>
+            <form action="result">
+                <table>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">Pregnancies:</td>
+                        <td align="left"><input type="text" name="n1"></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">Glucose:</td>
+                        <td align="left"><input type="text" name="n2" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">Blood Pressure:</td>
+                        <td align="left"><input type="text" name="n3" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">Skin Thickness:</td>
+                        <td align="left"><input type="text" name="n4" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">Insulin:</td>
+                        <td align="left"><input type="text" name="n5" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">BMI:</td>
+                        <td align="left"><input type="text" name="n6" required></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">Diabetes Pedigree Function:</td>
+                        <td align="left"><input type="text" name="n7"></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="font-family: cursive; font-weight: 500; font-size: 22px;">Age:</td>
+                        <td align="left"><input type="text" name="n8" required></td>
+                    </tr>
+                </table><br>
+                <input type="submit">
+            </form><br>
+            <style>
+                body {
+                    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-size: 21px;
+                    line-height: 1.42857143;
+                    color: #333;
+                    background-color: #fff;
+                }
+            </style>
+            Result:{{result2}}</div>
+</body>
+
+</html>
